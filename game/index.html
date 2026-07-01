@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>316熄灯档案 - 第一章 Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stage-panel">
+        <div id="sceneImage" class="scene-image scene-campus"></div>
+        <div class="scene-shade"></div>
+        <div class="top-bar">
+          <div>
+            <p class="eyebrow">红果园大学 / 男生宿舍 316</p>
+            <h1>316熄灯档案</h1>
+          </div>
+          <div class="chapter-badge">第一章 Demo</div>
+        </div>
+        <div id="characterBox" class="character-box is-hidden">
+          <div id="avatar" class="avatar"></div>
+          <div>
+            <p id="speakerName" class="speaker-name"></p>
+            <p id="speakerRole" class="speaker-role"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="play-panel">
+        <div class="panel-header">
+          <div>
+            <p id="nodeKicker" class="eyebrow">23:47 / 毕业前夜</p>
+            <h2 id="nodeTitle">载入中</h2>
+          </div>
+          <button id="restartButton" class="ghost-button" type="button">重新开始</button>
+        </div>
+
+        <div id="storyText" class="story-text"></div>
+        <div id="passwordBox" class="password-box is-hidden">
+          <label for="passwordInput">输入旧群备份密码</label>
+          <div class="password-row">
+            <input id="passwordInput" type="text" inputmode="numeric" autocomplete="off" placeholder="例如 23160427" />
+            <button id="passwordButton" type="button">解锁</button>
+          </div>
+          <p id="passwordHint" class="hint"></p>
+        </div>
+        <div id="choices" class="choices"></div>
+      </section>
+
+      <aside class="intel-panel">
+        <section class="phone-card">
+          <div class="phone-top">
+            <span>23:47</span>
+            <span>316旧群</span>
+          </div>
+          <div id="phoneLog" class="phone-log"></div>
+        </section>
+
+        <section class="clue-card">
+          <div class="side-title">
+            <h3>线索</h3>
+            <span id="clueCount">0</span>
+          </div>
+          <ul id="clueList" class="clue-list"></ul>
+        </section>
+
+        <section class="status-card">
+          <div class="side-title">
+            <h3>状态</h3>
+            <span>隐藏数值</span>
+          </div>
+          <div id="statBars" class="stat-bars"></div>
+        </section>
+      </aside>
+    </main>
+
+    <script src="story.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
