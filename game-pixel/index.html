@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>316熄灯档案 - 像素探索原型</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="pixel-shell">
+      <section class="map-panel">
+        <div class="map-header">
+          <div>
+            <p class="eyebrow">Unity 玩法验证 / WASD移动 / E交互</p>
+            <h1>316熄灯档案：像素探索原型</h1>
+          </div>
+          <button id="restart" type="button">重新开始</button>
+        </div>
+        <canvas id="gameCanvas" width="640" height="448" aria-label="316像素探索地图"></canvas>
+        <p id="prompt" class="prompt">靠近可疑物品或人物，按 E 交互。</p>
+      </section>
+
+      <aside class="side-panel">
+        <section class="status-card">
+          <div class="row">
+            <span>时间</span>
+            <strong id="timeLabel">23:47</strong>
+          </div>
+          <div class="row">
+            <span>地点</span>
+            <strong id="locationLabel">男生宿舍316</strong>
+          </div>
+          <div class="row">
+            <span>行动力</span>
+            <strong id="apLabel">18/18</strong>
+          </div>
+          <div class="bar"><span id="apBar"></span></div>
+        </section>
+
+        <section class="dialogue-card">
+          <h2 id="dialogueTitle">调查目标</h2>
+          <p id="dialogueText">在行动力耗尽前收集足够线索。第一章最低目标：7条线索。</p>
+        </section>
+
+        <section class="list-card">
+          <h2>线索 <span id="clueCount">0</span></h2>
+          <ul id="clues"></ul>
+        </section>
+
+        <section class="list-card">
+          <h2>背包</h2>
+          <ul id="inventory"></ul>
+        </section>
+
+        <section class="asset-card">
+          <img src="../assets/pixel/pixel-map-and-tiles.png" alt="像素场景资产预览" />
+        </section>
+      </aside>
+    </main>
+
+    <div id="failure" class="modal is-hidden">
+      <div class="modal-card">
+        <h2 id="failureTitle">线索不足</h2>
+        <p id="failureText"></p>
+        <button id="failureRestart" type="button">重新开始第一章</button>
+      </div>
+    </div>
+
+    <script src="app.js?v=2"></script>
+  </body>
+</html>

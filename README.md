@@ -16,16 +16,27 @@
 
 ## 直接游玩
 
-打开：
+像素探索原型，支持 WASD 移动、E 交互、行动力、背包、线索不足失败：
+
+```text
+game-pixel/index.html
+```
+
+图文选择 Demo：
 
 ```text
 game/index.html
 ```
 
-或打开根目录 `index.html`，会自动跳转到 Demo。
+或打开根目录 `index.html`，选择要进入的版本。
 
 第一章 Demo 已实现：
 
+- 像素地图移动探索原型
+- WASD 移动和 E 交互
+- 行动力和时间段推进
+- 线索不足失败提示
+- 背包和线索收集
 - 开场选择
 - 316 门口选择
 - 宿舍调查点
@@ -40,15 +51,17 @@ game/index.html
 
 ```text
 assets/images/          统一风格图片资产
+assets/pixel/           像素风地图、角色、物品资产
 docs/                   剧情与设定文档
 game/                   可直接打开的网页 Demo
+game-pixel/             可直接打开的像素探索原型
 unity-package/          Unity + Yarn Spinner 实现包
 ```
 
 ## 技术路线
 
-短期：用网页 Demo 验证剧情、分支、线索和节奏。  
-长期：迁移到 Unity + Yarn Spinner，制作正式版。
+短期：用 `game-pixel/` 验证像素探索手感、行动力、线索和失败条件。  
+长期：使用 `unity-package/316CasePixel/` 迁移到 Unity，制作正式版。
 
 ## 验收重点
 
@@ -57,3 +70,4 @@ unity-package/          Unity + Yarn Spinner 实现包
 - 场景是男生宿舍 316。
 - 旧事人物统一为鲁毛。
 - 图片资产风格统一，已存放在 `assets/images/`。
+- 像素资产已存放在 `assets/pixel/`，Unity 包中也有一份副本。
