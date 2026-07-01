@@ -1,0 +1,18 @@
+{
+    "name": "Case316.Editor",
+    "rootNamespace": "Case316.Editor",
+    "references": [
+        "Case316"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
